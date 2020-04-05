@@ -33,6 +33,7 @@ public class BoundsCheck : MonoBehaviour {
         }
 
         if (pos.y > camHeight - radius) {
+            // should be but i like this bug so will keep it for now pos.y = camHeight - radius;
             pos.y = -camHeight + radius;
         }
 
