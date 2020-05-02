@@ -22,12 +22,12 @@ public class Enemy : MonoBehaviour
         set { this.transform.position = value; }
     }
 
-    private void Awake() {
+    public void Awake() {
         bndCheck = GetComponent<BoundsCheck>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         Move();
 
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
         pos = tempPos;
     }
 
-    private void OnCollisionEnter(Collision coll) {
+    public void OnCollisionEnter(Collision coll) {
         GameObject otherGO = coll.gameObject;
         if (otherGO.tag == "ProjectileHero") {
             Destroy(otherGO);
